@@ -6,13 +6,20 @@
 
 import random as rand
 
+positions = ["A", "A#", "Bb", "B", "B#", "Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab"  ]
+
+
 # List of Modes
 modes = ["ionian", "dorian", "phrygian", "lydian", "mixolydian", "aeolian", "locrian"]
 print(modes)
 
-
-# List of Root Notes
-
+# ionian =
+# dorian =
+# phrygian =
+# lydian =
+# mixolydian =
+# aeolian =
+# locrian =
 
 # Check for voice (Ab vs G#)
 
@@ -24,8 +31,8 @@ print(modes)
 
 # Select Mode
 # mode = modes[random.randint(1, len(modes)]
-print(modes)
-print(modes[rand.randint(0, len(modes)-1)])
+mode = modes[rand.randint(0, len(modes)-1)]
+print (mode)
 # Select Root Note
 
 
