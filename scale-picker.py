@@ -8,9 +8,6 @@ import random as rand
 
 positions = ["A", "A#", "Bb", "B", "B#", "Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab"  ]
 
-# Select Root Note
-root_note = positions[rand.randint(0, len(positions)-1)]
-
 # List of Modes
 modes = ["ionian", "dorian", "phrygian", "lydian", "mixolydian", "aeolian", "locrian"]
 
@@ -34,20 +31,24 @@ seven_string = input("Are you playing a seven string? ")
 # uncomment for testing
 # seven_string = "no"
 
-# Select Mode
-# mode = modes[random.randint(1, len(modes)]
-mode = modes[rand.randint(0, len(modes)-1)]
+while True:
+    # Select Root Note
+    root_note = positions[rand.randint(0, len(positions) - 1)]
 
-# Select Root String
-if seven_string.lower() == 'yes':
-    strings = ["5th","6th","7th"]
-elif seven_string.lower() == 'no':
-    strings = ["5th","6th"]
+    # Select Mode
+    mode = modes[rand.randint(0, len(modes)-1)]
+
+    # Select Root String
+    if seven_string.lower() == 'yes':
+        strings = ["5th","6th","7th"]
+    elif seven_string.lower() == 'no':
+        strings = ["5th","6th"]
 
 
-string = strings[rand.randint(0, len(strings)-1)]
+    string = strings[rand.randint(0, len(strings)-1)]
 
-print("%s %s, starting on the %s string" % (root_note, mode, string))
+    print("%s %s, %s string root" % (root_note, mode, string))
+    input()
 
 
 
