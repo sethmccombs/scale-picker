@@ -11,19 +11,7 @@ positions = ["A", "A#", "Bb", "B", "B#", "Cb", "C", "C#", "Db", "D", "D#", "Eb",
 # List of Modes
 modes = ["ionian", "dorian", "phrygian", "lydian", "mixolydian", "aeolian", "locrian"]
 
-# ionian = W W H W W W H
-# dorian = W H W W W H W
-# phrygian = H W W W H W W
-# lydian = W W W H W W H
-# mixolydian = W W H W W H W
-# aeolian = W H W W H W W
-# locrian = H W W H W W
 
-# Check for voice (Ab vs G#)
-
-# -------
-#  DO THIS
-# -------
 
 # Prompt if playing 7 or 6 string
 seven_string = input("Are you playing a seven string? ")
@@ -37,6 +25,17 @@ while True:
 
     # Select Mode
     mode = modes[rand.randint(0, len(modes)-1)]
+
+    # Check for voice (Ab vs G#)
+    # ionian = W W H W W W H
+    # dorian = W H W W W H W
+    # phrygian = H W W W H W W
+    # lydian = W W W H W W H
+    # mixolydian = W W H W W H W
+    # aeolian = W H W W H W W
+    # locrian = H W W H W W
+
+
 
     # Select Root String
     if seven_string.lower() == 'yes':
